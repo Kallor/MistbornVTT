@@ -1,5 +1,5 @@
 {
-  "name": "mistborn",
+  "id": "mistborn",
   "version": "1.0.0",
   "description": "CSS compiler for the Mistborn system",
   "scripts": {
