@@ -19,7 +19,7 @@
             "url":"https://github.com/Nehon/"
         }
     ],
-    "esmodules": [],
+    "esmodules": ["module/chat-command.js"],
     "styles": ["styles/mistborn.css"],
     "packs":[],
     "languages":[
