@@ -28,8 +28,7 @@
             "name":"English",
             "path":"lang/en.json"
         }
-    ],
-    "socket": false,    
+    ],    
     "gridDistance": 1,
     "gridUnits": "m",
     "primaryTokenAttribute": "health",
