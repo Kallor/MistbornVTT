@@ -41,7 +41,7 @@ export class MistbornActorSheet extends ActorSheet {
    
      // Delete Inventory Item
     html.find('.power-control').click(ev => {
-      const li = $(ev.currentTarget);
+      const li = $(ev.currentTarget).closest('.power-control');
       const action = li.data("action");
       let powers = Object.values(duplicate(this.object.data.data.powers));
       switch(action){
