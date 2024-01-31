@@ -6,7 +6,16 @@
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.9",
     "templateVersion":5,
-    "author":"Nehon",    
+    "authors":[
+        {
+            "name":"Kallor",
+            "url":"https://github.com/Kallor/MistbornVTT/"
+        },
+        {
+            "name":"Nehon",
+            "url":"https://github.com/Nehon/"
+        }
+    ]
     "esmodules": ["module/simple.js", "module/chat-command.js"],
     "styles": ["styles/mistborn.css"],
     "packs":[],
@@ -22,8 +31,8 @@
     "gridUnits": "m",
     "primaryTokenAttribute": "health",
     "secondaryTokenAttribute": "willpower",
-    "url": "https://https://github.com/Nehon/MistbornVTT",
-    "manifest": "https://raw.githubusercontent.com/Nehon/MistbornVTT/master/system.json",
-    "download": "https://github.com/Nehon/MistbornVTT/raw/master/download/archive.zip",
+    "url": "https://https://github.com/Kallor/MistbornVTT",
+    "manifest": "https://raw.githubusercontent.com/Kallor/MistbornVTT/blob/master/system.json",
+    "download": "https://github.com/Kallor/MistbornVTT/blob/master/download/archive.zip",
     "license": "licence.txt"
 }
