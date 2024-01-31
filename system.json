@@ -1,11 +1,11 @@
 {
     "id":"mistborn",
     "name":"mistborn",
-    "title":"Unnificial Mistborn Adventure Game",
+    "title":"Unnoficial Mistborn Adventure Game",
     "description":"Based on Crafty games Mistborn Adventure Game with house rules",
     "version":"0.0.1",
     "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.8.9",
+    "compatibleCoreVersion": "11",
     "templateVersion":5,
     "authors":[
         {
@@ -33,7 +33,7 @@
     "primaryTokenAttribute": "health",
     "secondaryTokenAttribute": "willpower",
     "url": "https://https://github.com/Kallor/MistbornVTT",
-    "manifest": "https://raw.githubusercontent.com/Kallor/MistbornVTT/blob/master/system.json",
-    "download": "https://github.com/Kallor/MistbornVTT/blob/master/download/archive.zip",
+    "manifest": "https://raw.githubusercontent.com/Kallor/MistbornVTT/master/system.json",
+    "download": "https://github.com/Kallor/MistbornVTT/raw/master/download/archive.zip",
     "license": "licence.txt"
 }
