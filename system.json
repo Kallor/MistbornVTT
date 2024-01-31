@@ -5,7 +5,7 @@
     "description":"Based on Crafty games Mistborn Adventure Game with house rules",
     "version":"0.0.1",
     "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.8.9",
     "templateVersion":5,
     "authors":[
         {
