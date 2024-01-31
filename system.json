@@ -1,11 +1,13 @@
 {
     "id":"mistborn",
-    "name":"mistborn",
     "title":"Unnoficial Mistborn Adventure Game",
     "description":"Based on Crafty games Mistborn Adventure Game with house rules",
     "version":"0.0.1",
-    "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "11",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "11.315",
+        "maximum": "11"
+    },
     "templateVersion":5,
     "authors":[
         {
