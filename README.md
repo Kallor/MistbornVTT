@@ -4,3 +4,5 @@ Custom and unnoficial Foundry VTT system for Crafty Game's Mistborn Adventure Ga
 The system here implements the basics of mistborn but with custom house rules.
 Probably not what you are looking for.
 Use at your own risk.
+
+WIP Updating to Foundry in 2024
