@@ -6,7 +6,7 @@
             <h1 class="item-name"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>          
             <div class="flexrow">
                 <div class="right">Quantity: </div>
-                <input name="data.quantity" type="text" value="{{item.data.quantity}}" placeholder="Quantity" />
+                <input name="system.quantity" type="text" value="{{item.system.quantity}}" placeholder="Quantity" />
             </div>
         </div>                
     </header>
@@ -14,7 +14,7 @@
     <section class="sheet-body">
         <div>Description</div>
         <div>
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
         </div>    
     </section>
 </form>

@@ -10,13 +10,13 @@
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>  
             {{log actor}}
-            <input id="concept" name="data.concept" type="text" value="{{actor.data.concept}}" placeholder="Concept" />
+            <input id="concept" name="system.concept" type="text" value="{{actor.system.concept}}" placeholder="Concept" />
             <div class="center">
-                <input name="data.race" type="text" value="{{actor.data.race}}" placeholder="Race"/>/
-                <input name="data.sex" type="text" value="{{actor.data.sex}}" placeholder="Sex"/>/
-                <input name="data.age" type="text" value="{{actor.data.age}}" placeholder="age"/>/
-                <input name="data.height" type="text" value="{{actor.data.height}}" placeholder="Height"/>/
-                <input name="data.weight" type="text" value="{{actor.data.weight}}" placeholder="Weight"/>
+                <input name="system.race" type="text" value="{{actor.system.race}}" placeholder="Race"/>/
+                <input name="system.sex" type="text" value="{{actor.system.sex}}" placeholder="Sex"/>/
+                <input name="system.age" type="text" value="{{actor.system.age}}" placeholder="age"/>/
+                <input name="system.height" type="text" value="{{actor.system.height}}" placeholder="Height"/>/
+                <input name="system.weight" type="text" value="{{actor.system.weight}}" placeholder="Weight"/>
             </div>    
             {{> "systems/mistborn/templates/parts/character-stats.hbs"}}
         </div>        
@@ -42,7 +42,7 @@
             {{> "systems/mistborn/templates/parts/character-equipment.hbs"}}            
         </div>
         <div class="tab story" data-group="primary" data-tab="story">
-            {{editor content=data.story target="data.story" button=true owner=owner editable=editable}}
+            {{editor system.story target="system.story" button=true owner=owner editable=editable}}
         </div>
     
         {{!-- Owned Items Tab --}}
