@@ -21,7 +21,7 @@ export class SimpleItemSheet extends ItemSheet {
   /** @override */
   getData() {
     const data = super.getData();
-    
+    data.system = this.item.system;
     return data;
   }
 

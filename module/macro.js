@@ -6,12 +6,12 @@
  * @returns {Promise}
  */
 export async function createmistbornMacro(data, slot) {
-  const command = `const roll = new Roll("${data.roll}", actor ? actor.getRollData() : {});
-  roll.toMessage({speaker, flavor: "${data.label}"});`;
+  const command = `const roll = new Roll("${system.roll}", actor ? actor.getRollData() : {});
+  roll.toMessage({speaker, flavor: "${system.label}"});`;
   let macro = game.macros.entities.find(m => (m.name === item.label) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
-      name: data.label,
+      name: system.label,
       type: "script",
       command: command,
       flags: { "mistborn.attrMacro": true }

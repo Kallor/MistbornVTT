@@ -133,10 +133,10 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('hint', function (item) {
         let content;
-        if(item.data.worn){
+        if(item.system.worn){
             content = "E"
-        } else if(item.data.properties && item.data.properties.consumable){
-            content = item.data.qty;
+        } else if(item.system.properties && item.system.properties.consumable){
+            content = item.system.qty;
         }
         if (content) {
             return new Handlebars.SafeString(`<span class="hint">${content}</span>`)
@@ -153,7 +153,7 @@ export const registerHandlebarsHelpers = function () {
         }
         let unslotted = [];
         for (const item of inventory) {
-            if(!item.data.worn){
+            if(!item.system.worn){
                 continue;
             }
             if(item.flags.equipSlot === undefined || item.flags.equipSlot === null){
@@ -209,10 +209,10 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getWorn', function (items) {
-        let worn = items.filter(item => item.type === "item" && item.data.worn);
+        let worn = items.filter(item => item.type === "item" && item.system.worn);
         worn.sort(function (a, b) {
-            const aKey = a.data.subtype + "-" + a.name.slugify({ strict: true });
-            const bKey = b.data.subtype + "-" + b.name.slugify({ strict: true });
+            const aKey = a.system.subtype + "-" + a.name.slugify({ strict: true });
+            const bKey = b.system.subtype + "-" + b.name.slugify({ strict: true });
             return (aKey > bKey) ? 1 : -1
         });
         return worn;
@@ -242,15 +242,15 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('getCapacities', function (items) {
         let caps = items.filter(item => item.type === "capacity");
         caps.sort(function (a, b) {
-            const aKey = a.data.path + "-" + a.data.rank;
-            const bKey = b.data.path + "-" + b.data.rank;
+            const aKey = a.system.path + "-" + a.system.rank;
+            const bKey = b.system.path + "-" + b.system.rank;
             return (aKey > bKey) ? 1 : -1
         });
         return caps;
     });
     Handlebars.registerHelper('getExtraCapacities', function (items, start, end) {
         let result = []
-        let caps = items.filter(item => item.type === "capacity" && (item.data.rank === undefined || item.data.rank === null));
+        let caps = items.filter(item => item.type === "capacity" && (item.system.rank === undefined || item.system.rank === null));
         for (let i = start; i <= end ; i++) {
             result[i - start] = caps[i];
         }
@@ -267,7 +267,7 @@ export const registerHandlebarsHelpers = function () {
 
 
     Handlebars.registerHelper('idFromKey', function (items, key) {        
-        let item = items.find(item => item.data.key === key);        
+        let item = items.find(item => item.system.key === key);        
         return item._id;
     });
 
@@ -285,7 +285,7 @@ export const registerHandlebarsHelpers = function () {
     // });
 
     Handlebars.registerHelper('getPath', function (items, pathKey) {
-        return items.filter(item => item.type === "path").find(p => p.data.key === pathKey);
+        return items.filter(item => item.type === "path").find(p => p.system.key === pathKey);
     });
 
     Handlebars.registerHelper('isNull', function (val) {
@@ -391,7 +391,7 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('includesKey', function (items, type, key) {
         // console.log(items);
-        return items.filter(i => i.type === type).map(i => i.data.key).includes(key);
+        return items.filter(i => i.type === type).map(i => i.system.key).includes(key);
     });
 
 }

@@ -228,8 +228,9 @@ async function _simpleDirectoryTemplates(collection, event) {
       const form = html[0].querySelector("form");
       const template = entityCollection.get(form.type.value);
       if ( template ) {
-        createData = mergeObject(template.data, createData, {inplace: false});
-        createData.type = template.data.type;
+        console.log("Template object structure:", template);
+        createData = mergeObject(template.system, createData, {inplace: false});
+        createData.type = template.system.type;
         delete createData.flags.mistborn.isTemplate;
       }
       createData.name = form.name.value;

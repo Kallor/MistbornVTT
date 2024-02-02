@@ -23,7 +23,8 @@ export class MistbornActorSheet extends ActorSheet {
 
   /** @override */
   getData() {
-    const data = super.getData();    
+    const data = super.getData();
+    data.system = this.actor.system;
     return data;
   }
 
@@ -40,10 +41,12 @@ export class MistbornActorSheet extends ActorSheet {
     html.find(".rollable").on("click", this._onRoll.bind(this));
    
      // Delete Inventory Item
-    html.find('.power-control').click(ev => {
+    html.find('.power-control').on('click', ev => {
+      console.log("Add power button clicked");
       const li = $(ev.currentTarget).closest('.power-control');
       const action = li.data("action");
-      let powers = Object.values(duplicate(this.object.data.data.powers));
+      let powers = Object.values(duplicate(this.object.system.powers));
+      console.log("Powers before addition:", powers);
       switch(action){
         case "add":          
           powers.push({
@@ -57,7 +60,8 @@ export class MistbornActorSheet extends ActorSheet {
                       effect:""
                   }
               ]
-          });          
+          });
+          console.log("Powers after addition:", powers);    
           break;
         case "delete":{
             const index = li.data("index");
@@ -65,7 +69,7 @@ export class MistbornActorSheet extends ActorSheet {
          }
           break;      
       }
-      this._updateObject(ev,{data:{powers: powers}});
+      this._updateObject(ev,{system:{powers: powers}});
       
     });
 
@@ -97,7 +101,7 @@ export class MistbornActorSheet extends ActorSheet {
 
   async _onRoll(event) {
     let elem = $(event.currentTarget);
-    const dice = elem.data('dice')
+    const dice = elem.system('dice')
     const dialogContent = await renderTemplate("systems/mistborn/templates/chat/roll-dialog.hbs", {});
 
     const d = new Dialog({
@@ -127,7 +131,13 @@ export class MistbornActorSheet extends ActorSheet {
 
   /** @override */
   _updateObject(event, formData) {
-
+    console.log("FormData before updating actor:", formData);
+    this.object.update(formData).then(result => {
+      console.log("Actor update successful:", result);
+    }).catch(error => {
+      console.error("Error updating actor:", error);
+    });
+  
     return this.object.update(formData);
   }
 
