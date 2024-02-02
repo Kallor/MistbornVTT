@@ -17,3 +17,29 @@
     font-style: italic;
   }
 }
+
+.dice-roll-card {
+  border: 1px solid #666;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  .card-header {
+      font-weight: bold;
+  }
+
+  .roll-total {
+      font-size: 1.2em;
+      color: green;
+  }
+
+  .roll-formula {
+      font-size: 0.8em;
+      color: #333;
+  }
+
+  .card-footer {
+      font-size: 0.7em;
+      text-align: right;
+  }
+}
