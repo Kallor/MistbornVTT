@@ -6,16 +6,16 @@
                 <div></div><div><span class="indicator" style="margin-right:30px;">dice<span></div>                
            </div>           
            <div class="flexrow">
-                <a class="right rollable" data-dice="{{actor.data.physique}}">Physique</a>
-                <div><input name="data.physique" type="text" value="{{actor.data.physique}}" style="margin-right:30px;"/></div>                              
+                <a class="right rollable" data-dice="{{actor.system.physique}}">Physique</a>
+                <div><input name="system.physique" type="text" value="{{actor.system.physique}}" style="margin-right:30px;"/></div>                              
            </div>           
            <div class="flexrow">
-                <a class="right rollable" data-dice="{{actor.data.charm}}">Charm</a>
-                <div><input name="data.charm" type="text" value="{{actor.data.charm}}" style="margin-right:30px;"/></div>                
+                <a class="right rollable" data-dice="{{actor.system.charm}}">Charm</a>
+                <div><input name="system.charm" type="text" value="{{actor.system.charm}}" style="margin-right:30px;"/></div>                
            </div>           
            <div class="flexrow">
-               <a class="right rollable" data-dice="{{actor.data.wits}}">Wits</a>
-               <div><input name="data.wits" type="text" value="{{actor.data.wits}}" style="margin-right:30px;"/></div>
+               <a class="right rollable" data-dice="{{actor.system.wits}}">Wits</a>
+               <div><input name="system.wits" type="text" value="{{actor.system.wits}}" style="margin-right:30px;"/></div>
            </div>                
         </div>
         <div class="column">
@@ -24,19 +24,19 @@
                 <div class="flex2"></div><div><span class="indicator">dice</span></div><div><span class="indicator">spent<span></div>                
             </div>           
             <div class="flexrow">
-                    <a class="right flex2 rollable" data-dice="{{actor.data.resources}}">Resources</a>
-                    <div><input name="data.resources" type="text" value="{{actor.data.resources}}"/></div>                              
-                    <div><input class="input-spent" name="data.resourcesSpent" type="text" value="{{actor.data.resourcesSpent}}"/></div>                              
+                    <a class="right flex2 rollable" data-dice="{{actor.system.resources}}">Resources</a>
+                    <div><input name="system.resources" type="text" value="{{actor.system.resources}}"/></div>                              
+                    <div><input class="input-spent" name="system.resourcesSpent" type="text" value="{{actor.system.resourcesSpent}}"/></div>                              
             </div>           
             <div class="flexrow">
-                    <a class="right flex2 rollable" data-dice="{{actor.data.influence}}">Influence</a>
-                    <div><input name="data.influence" type="text" value="{{actor.data.influence}}"/></div>                
-                    <div><input class="input-spent" name="data.influenceSpent" type="text" value="{{actor.data.influenceSpent}}"/></div>                              
+                    <a class="right flex2 rollable" data-dice="{{actor.system.influence}}">Influence</a>
+                    <div><input name="system.influence" type="text" value="{{actor.system.influence}}"/></div>                
+                    <div><input class="input-spent" name="system.influenceSpent" type="text" value="{{actor.system.influenceSpent}}"/></div>                              
             </div>           
             <div class="flexrow">
-                <a class="right flex2 rollable" data-dice="{{actor.data.spirit}}">Sprit</a>
-                <div><input name="data.spirit" type="text" value="{{actor.data.spirit}}"/></div>
-                <div><input class="input-spent" name="data.spiritSpent" type="text" value="{{actor.data.spiritSpent}}"/></div>                              
+                <a class="right flex2 rollable" data-dice="{{actor.system.spirit}}">Sprit</a>
+                <div><input name="system.spirit" type="text" value="{{actor.system.spirit}}"/></div>
+                <div><input class="input-spent" name="system.spiritSpent" type="text" value="{{actor.system.spiritSpent}}"/></div>                              
             </div>                     
         </div>
         <div class="column">
@@ -46,18 +46,18 @@
             </div>           
             <div class="flexrow">
                     <div class="right flex2">Health</div>
-                    <div><input name="data.health" type="text" value="{{actor.data.health}}"/></div>                              
-                    <div><input class="input-spent" name="data.healthSpent" type="text" value="{{actor.data.healthSpent}}"/></div>                              
+                    <div><input name="system.health" type="text" value="{{actor.system.health}}"/></div>                              
+                    <div><input class="input-spent" name="system.healthSpent" type="text" value="{{actor.system.healthSpent}}"/></div>                              
             </div>           
             <div class="flexrow">
                     <div class="right flex2">Reputation</div>
-                    <div><input name="data.reputation" type="text" value="{{actor.data.reputation}}"/></div>                
-                    <div><input class="input-spent" name="data.reputationSpent" type="text" value="{{actor.data.reputationSpent}}"/></div>                              
+                    <div><input name="system.reputation" type="text" value="{{actor.system.reputation}}"/></div>                
+                    <div><input class="input-spent" name="system.reputationSpent" type="text" value="{{actor.system.reputationSpent}}"/></div>                              
             </div>           
             <div class="flexrow">
                 <div class="right flex2">Willpower</div>
-                <div><input name="data.willpower" type="text" value="{{actor.data.willpower}}"/></div>
-                <div><input class="input-spent" name="data.willpowerSpent" type="text" value="{{actor.data.willpowerSpent}}"/></div>                              
+                <div><input name="system.willpower" type="text" value="{{actor.system.willpower}}"/></div>
+                <div><input class="input-spent" name="system.willpowerSpent" type="text" value="{{actor.system.willpowerSpent}}"/></div>                              
             </div>           
         </div>
     </div>
